@@ -1,57 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
-    
-  <header>
-    <h1>Vitor Gallucci</h1>
-    <nav>
-      <ul>
-        <li><a href="#presentation">Presentation</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <section id="presentation">
-      <h2>Presentation</h2>
-      <img src="https://dummyimage.com/600x400/268bd2/fff" alt="My image" class="bounce-top">
-      <p>Hi my name is Vitor, I`m a junior full stack and machine learning developer based in Brazil.</p>
-    </section>
-    
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <img src="https://dummyimage.com/400x300/268bd2/fff" alt="Project 1">
-        <h3>Project 1 title</h3>
-        <h4>description</h4>
-      </div>
-      <div class="project">
-        <img src="https://dummyimage.com/400x300/268bd2/fff" alt="Project 2">
-        <h3>Project 2 title</h3>
-        <h4>description</h4>
-      </div>
-      <!-- Add more projects here -->
-    </section>
-    
-    <section id="contact">
-      <h2>Contact</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
-        <input type="submit" value="Send">
-      </form>
-    </section>
-  </main>
+    <div class="container">
+        <!-- Header com navegação -->
+        <header>
+            <div class="logo">
+                <h1>Vitor Gallucci</h1>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#sites">Sites</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#resumo">Resumo</a></li>
+                </ul>
+                <div class="menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Seção inicial -->
+        <section id="inicio" class="secao">
+            <div class="intro-container">
+                <div class="foto-perfil">
+                    <div class="foto-placeholder">
+                        <img src="./v.png" alt="Minha Foto de Perfil">
+                    </div>
+                </div>
+                <div class="intro-texto">
+                    <h2>Olá, sou <span class="destaque">Vitor</span></h2>
+                    <h3>Desenvolvedor Web & Designer</h3>
+                    <p>Bem-vindo ao meu portfólio! Sou um profissional criativo especializado em desenvolvimento web, design gráfico e produção de conteúdo digital.</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/vitor-barbosa-gallucci-45692b247/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/VitorGallucci" class="social-icon"><i class="fab fa-github"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fab fa-behance"></i></a> -->
+                        <!-- <a href="https://www.youtube.com/@vitorgallucci5027" class="social-icon"><i class="fab fa-youtube"></i></a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="destaques">
+                <h2>Destaques</h2>
+                <div class="destaques-grid">
+                    <!-- Destaque de Sites -->
+                    <div class="destaque-card">
+                        <div class="destaque-img">
+                            <img src="./sitenobreak.png" alt="Site em destaque">
+                        </div>
+                        <div class="destaque-info">
+                            <h3>Site NoBreak baterias</h3>
+                            <p>Site completo para loja de venda de baterias, feito para um cliente</p>
+                            <a href="#sites" class="btn-ver-mais">Ver mais</a>
+                        </div>
+                    </div>
+                    <!-- Destaque de Vídeos -->
+                    <div class="destaque-card">
+                        <div class="destaque-img">
+                            <img src="video-destaque.jpg" alt="Vídeo em destaque">
+                        </div>
+                        <div class="destaque-info">
+                            <h3>Canal YouTube</h3>
+                            <p>Tutoriais e dicas de desenvolvimento web</p>
+                            <a href="#videos" class="btn-ver-mais">Ver mais</a>
+                        </div>
+                    </div>
+                    <!-- Destaque de Design -->
+                    <div class="destaque-card">
+                        <div class="destaque-img">
+                            <img src="design-destaque.jpg" alt="Design em destaque">
+                        </div>
+                        <div class="destaque-info">
+                            <h3>Ilustração Premiada</h3>
+                            <p>Projeto de identidade visual para marca</p>
+                            <a href="#design" class="btn-ver-mais">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Sites -->
+        <section id="sites" class="secao">
+            <h2>Websites <span class="destaque">Desenvolvidos</span></h2>
+            <div class="sites-grid">
+                <!-- Site 1 -->
+                <div class="site-card">
+                    <div class="site-img">
+                        <img src="site1.jpg" alt="Site 1">
+                        <div class="site-overlay">
+                            <a href="https://exemplo.com/site1" target="_blank" class="btn-visitar">Visitar Site</a>
+                        </div>
+                    </div>
+                    <div class="site-info">
+                        <h3>E-commerce Moda</h3>
+                        <p>Site responsivo com sistema de pagamento integrado</p>
+                        <div class="tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Site 2 -->
+                <div class="site-card">
+                    <div class="site-img">
+                        <img src="site2.jpg" alt="Site 2">
+                        <div class="site-overlay">
+                            <a href="https://exemplo.com/site2" target="_blank" class="btn-visitar">Visitar Site</a>
+                        </div>
+                    </div>
+                    <div class="site-info">
+                        <h3>Portal de Notícias</h3>
+                        <p>Sistema de gerenciamento de conteúdo personalisado</p>
+                        <div class="tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Site 3 -->
+                <div class="site-card">
+                    <div class="site-img">
+                        <img src="site3.jpg" alt="Site 3">
+                        <div class="site-overlay">
+                            <a href="https://exemplo.com/site3" target="_blank" class="btn-visitar">Visitar Site</a>
+                        </div>
+                    </div>
+                    <div class="site-info">
+                        <h3>Portfolio Fotógrafo</h3>
+                        <p>Design minimalista com galeria interativa</p>
+                        <div class="tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>jQuery</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Site 4 -->
+                <div class="site-card">
+                    <div class="site-img">
+                        <img src="site4.jpg" alt="Site 4">
+                        <div class="site-overlay">
+                            <a href="https://exemplo.com/site4" target="_blank" class="btn-visitar">Visitar Site</a>
+                        </div>
+                    </div>
+                    <div class="site-info">
+                        <h3>Aplicativo Web</h3>
+                        <p>Dashboard administrativo com gráficos avançados</p>
+                        <div class="tags">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Vídeos -->
+        <section id="videos" class="secao">
+            <h2>Meus <span class="destaque">Vídeos</span></h2>
+            <div class="videos-grid">
+                <!-- Vídeo 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video1.jpg" alt="Thumbnail do vídeo 1">
+                        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" class="play-btn" target="_blank">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>Como criar um site responsivo</h3>
+                        <p>Tutorial completo sobre design responsivo</p>
+                    </div>
+                </div>
+                <!-- Vídeo 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video2.jpg" alt="Thumbnail do vídeo 2">
+                        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" class="play-btn" target="_blank">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>Animações CSS avançadas</h3>
+                        <p>Técnicas de animação para websites modernos</p>
+                    </div>
+                </div>
+                <!-- Vídeo 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video3.jpg" alt="Thumbnail do vídeo 3">
+                        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" class="play-btn" target="_blank">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>React para iniciantes</h3>
+                        <p>Aprenda a construir aplicativos com React</p>
+                    </div>
+                </div>
+                <!-- Vídeo 4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="video4.jpg" alt="Thumbnail do vídeo 4">
+                        <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" class="play-btn" target="_blank">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <div class="video-info">
+                        <h3>Dicas de UI/UX Design</h3>
+                        <p>Como melhorar a experiência do usuário</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Design -->
+        <section id="design" class="secao">
+            <h2>Design & <span class="destaque">Ilustrações</span></h2>
+            <div class="design-grid">
+                <!-- Design 1 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design1.jpg" alt="Design 1">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>Logo Empresarial</h3>
+                        <p>Identidade visual para empresa de tecnologia</p>
+                    </div>
+                </div>
+                <!-- Design 2 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design2.jpg" alt="Design 2">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>Ilustração Digital</h3>
+                        <p>Arte conceitual para jogo mobile</p>
+                    </div>
+                </div>
+                <!-- Design 3 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design3.jpg" alt="Design 3">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>UI App Mobile</h3>
+                        <p>Interface de usuário para aplicativo fitness</p>
+                    </div>
+                </div>
+                <!-- Design 4 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design4.jpg" alt="Design 4">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>Banner Publicitário</h3>
+                        <p>Campanha digital para rede social</p>
+                    </div>
+                </div>
+                <!-- Design 5 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design5.jpg" alt="Design 5">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>Poster Evento</h3>
+                        <p>Design para conferência de tecnologia</p>
+                    </div>
+                </div>
+                <!-- Design 6 -->
+                <div class="design-card">
+                    <div class="design-img">
+                        <img src="design6.jpg" alt="Design 6">
+                        <div class="design-overlay">
+                            <a href="#" class="btn-ampliar">Ampliar</a>
+                        </div>
+                    </div>
+                    <div class="design-info">
+                        <h3>Branding Completo</h3>
+                        <p>Identidade visual para startup</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para ampliação de imagens -->
+            <div class="modal" id="modal-imagem">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <img src="" alt="Imagem ampliada" id="modal-img">
+                    <div class="modal-caption" id="modal-caption"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Resumo e Qualificações -->
+        <section id="resumo" class="secao">
+            <h2>Resumo & <span class="destaque">Qualificações</span></h2>
+            
+            <div class="resumo-container">
+                <!-- Sobre Mim -->
+                <div class="resumo-secao">
+                    <h3>Sobre Mim</h3>
+                    <div class="sobre-conteudo">
+                        <p>Sou um desenvolvedor web e designer com mais de 2 anos de experiência, especializado em criar soluções digitais criativas e funcionais. Minha paixão está em transformar ideias em projetos digitais impressionantes que combinam estética e funcionalidade.</p>
+                        <p>Trabalho com as mais recentes tecnologias e estou sempre em busca de novas habilidades para oferecer soluções inovadoras. Meu objetivo é criar experiências digitais memoráveis que atendam às necessidades do cliente e encantem os usuários finais.</p>
+                    </div>
+                </div>
+                
+                <!-- Educação -->
+                <div class="resumo-secao">
+                    <h3>Educação</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-data">
+                                <span class="ano">2025 - 2026</span>
+                                <h4>Tecnologia em Análise e Desenvolvimento de Sistemas</h4>
+                                <p>Pontifícia Universidade Católica do Paraná</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-data">
+                                <span class="ano">2022 - 2024</span>
+                                <h4>Tecnologia em Inteligência Artificial Aplicada</h4>
+                                <p>Pontifícia Universidade Católica do Paraná</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificados -->
+                <div class="resumo-secao">
+                    <h3>Certificados</h3>
+                    <div class="certificados-lista">
+                        <div class="certificado-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="certificado-info">
+                                <h4>Front-End Web Developer</h4>
+                                <p>Udemy, 2023</p>
+                            </div>
+                        </div>
+                        <div class="certificado-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="certificado-info">
+                                <h4>UI/UX Design Masterclass</h4>
+                                <p>DesignLab, 2022</p>
+                            </div>
+                        </div>
+                        <div class="certificado-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="certificado-info">
+                                <h4>React & Redux Advanced</h4>
+                                <p>Coursera, 2021</p>
+                            </div>
+                        </div>
+                        <div class="certificado-item">
+                            <i class="fas fa-certificate"></i>
+                            <div class="certificado-info">
+                                <h4>Adobe Creative Suite Pro</h4>
+                                <p>Adobe, 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experiência -->
+                <div class="resumo-secao">
+                    <h3>Experiência</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-data">
+                                <span class="ano">2022 - Presente</span>
+                                <h4>Desenvolvedor Web Sênior</h4>
+                                <p>Empresa Tecnologia Ltda.</p>
+                                <ul>
+                                    <li>Desenvolvimento de aplicações web completas</li>
+                                    <li>Liderança de equipe de 5 desenvolvedores front-end</li>
+                                    <li>Implementação de estratégias de UI/UX</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-data">
+                                <span class="ano">2019 - 2022</span>
+                                <h4>Designer UX & Desenvolvedor</h4>
+                                <p>Agência Digital S.A.</p>
+                                <ul>
+                                    <li>Criação de interfaces para aplicativos mobile</li>
+                                    <li>Desenvolvimento front-end com React</li>
+                                    <li>Design de identidade visual para clientes</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-data">
+                                <span class="ano">2018 - 2019</span>
+                                <h4>Estágio em Web Design</h4>
+                                <p>StartUp Inovação Inc.</p>
+                                <ul>
+                                    <li>Auxílio no desenvolvimento de websites responsivos</li>
+                                    <li>Criação de elementos gráficos para mídias sociais</li>
+                                    <li>Otimização de sites para SEO</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato e Rodapé -->
+        <footer>
+            <div class="contato-container">
+                <h2>Entre em <span class="destaque">Contato</span></h2>
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>vitorgallucci@hotmail.com</p>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(42) 98408-1387</p>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Curitiba, Paraná, Brasil</p>
+                    </div>
+                </div>
+                <div class="social-footer">
+                    <a href="https://www.linkedin.com/in/vitor-barbosa-gallucci-45692b247/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/VitorGallucci" class="social-icon"><i class="fab fa-github"></i></a>
+                    <!-- <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div> -->
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Meu Portfólio. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
